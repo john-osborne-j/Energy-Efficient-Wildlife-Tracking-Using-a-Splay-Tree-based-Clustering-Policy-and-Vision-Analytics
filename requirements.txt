@@ -1,0 +1,8 @@
+flask
+opencv-python-headless
+ultralytics
+deep-sort-realtime
+numpy
+torch
+torchvision
+gunicorn

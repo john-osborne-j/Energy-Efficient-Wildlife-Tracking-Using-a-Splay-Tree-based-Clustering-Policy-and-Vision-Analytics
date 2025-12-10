@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splay Algorithm Visualization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <section class="hero">
+            <h1>Energy-Efficient Wildlife Tracking Using a Splay Tree Inspired Clustering Policy and Vision-Aided
+                Analytics</h1>
+            <p>Advanced Sensor Cluster Simulation & Visualization<br>Powered by Splay Network Algorithms</p>
+        </section>
+
+        <section class="app-container">
+            <aside class="sidebar">
+                <div class="glass-panel">
+                    <p class="subtitle">Simulation Controls</p>
+
+                    <div class="control-group">
+                        <label for="nodeCount">Number of Nodes</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="nodeCount" value="50" min="10" max="500">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <button id="startBtn" class="primary-btn">
+                            <span class="btn-text">Initialize & Start</span>
+                            <div class="btn-shine"></div>
+                        </button>
+                        <button id="stopBtn" class="secondary-btn" disabled>Stop</button>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="label">Time Step</span>
+                            <span class="value" id="simTime">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Active Nodes</span>
+                            <span class="value" id="activeNodes">0</span>
+                        </div>
+                    </div>
+
+                    <div class="legend">
+                        <h3>Network State Legend</h3>
+                        <div class="legend-item">
+                            <span class="icon gateway"></span>
+                            <span class="text">Gateway</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="icon head"></span>
+                            <span class="text">Cluster Head</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="icon high-batt"></span>
+                            <span class="text">High Battery (>50%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="icon med-batt"></span>
+                            <span class="text">Med Battery (>20%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="icon low-batt"></span>
+                            <span class="text">Low Battery</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="icon dead"></span>
+                            <span class="text">Dead Node</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="viewport">
+                <!-- Canvas container for responsive sizing -->
+                <div id="canvas-wrapper">
+                    <canvas id="simCanvas"></canvas>
+                </div>
+
+                <!-- Live Dashboard -->
+                <div id="dashboard" class="dashboard-panel">
+                    <h3>Network Health Dashboard</h3>
+                    <div class="dashboard-grid">
+                        <div class="dash-card">
+                            <span class="dash-label">Total Dead Nodes</span>
+                            <span class="dash-value" id="deadCount">0</span>
+                        </div>
+                        <div class="dash-card">
+                            <span class="dash-label">Avg Downtime (Ticks)</span>
+                            <span class="dash-value" id="avgDowntime">0</span>
+                        </div>
+                    </div>
+                    <div class="dead-nodes-list-container">
+                        <h4>Recent Node Failures</h4>
+                        <ul id="deadNodesList" class="dead-nodes-list">
+                            <!-- Populated via JS -->
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+        <!-- New Section: Wildlife Analytics -->
+        <section class="analytics-container">
+            <div class="analytics-header">
+                <h2>Real-Time Wildlife Analytics</h2>
+                <p>Upload video footprint to detect and track species using Splay-Optimized Edge-Server Pipeline.</p>
+            </div>
+
+            <div class="analytics-content">
+                <div class="upload-zone">
+                    <div class="upload-box" id="dropZone">
+                        <span class="icon cloud-upload"></span>
+                        <p>Drag & Drop Wildlife Video or Click to Browse</p>
+                        <input type="file" id="videoInput" accept="video/*" hidden>
+                    </div>
+                    <div class="status-box" id="uploadStatus">Awaiting Upload...</div>
+                </div>
+
+                <div class="video-feed-wrapper">
+                    <div class="video-placeholder" id="videoPlaceholder">
+                        <p>Live Detection Feed will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
